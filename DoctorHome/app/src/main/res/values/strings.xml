@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">DPHospital</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Logout</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Hospital</string>
+    <string name="menu_slideshow">Account</string>
+    <string name="menu_feedback">Feed back</string>
+    <string name="forgot_password">
+        <u>Forgot password?</u>
+    </string>
+    <string name="newuser">
+        New user? <u>Sign up</u>
+    </string>
+    <string name="olduser">
+        Already has an account? <u>Sign in</u>
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Coming soon!</string>
+
+    <string name="doctor">Doctor List</string>
+    <string name="spinner_major">Majors</string>
+    <string-array name="majors">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+    </string-array>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="log_out">Log out</string>
+    <string name="change_password">Change password</string>
+    <string name="update_info">Update info</string>
+    <string name="fake_fullname">Luka Modric</string>
+    <string name="greeting">How are you to day?</string>
+    <string name="hi_user">Hi, Luka Modric</string>
+    <string name="find_now">Find now</string>
+    <string name="schedule">Schedule</string>
+    <string name="specialities">Specialities</string>
+    <string name="available_date">Available Date</string>
+    <string name="address">Address</string>
+    <string name="symptom">Dashboard</string>
+    <string name="check_doctor">Check Doctor</string>
+    <string name="disease_list">Disease List</string>
+    <string name="add_disease">Add Disease</string>
+    <string name="disease_name">Disease Name</string>
+    <string name="major">Major</string>
+    <string name="description">Description</string>
+    <string name="submit">Submit</string>
+    <string name="add">Add</string>
+    <string name="diseases_list">Diseases List</string>
+    <string name="welcomes">Welcome</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+</resources>

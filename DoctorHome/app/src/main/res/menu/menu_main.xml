@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/baseline_home_24"
+        android:id="@+id/homeFragment"
+        app:showAsAction="always"
+        android:title="Home"/>
+    <item android:icon="@drawable/outline_add_box_24"
+        android:id="@+id/bookingFragment"
+        app:showAsAction="always"
+        android:title="Booking"/>
+    <item android:icon="@drawable/outline_calendar_month_24"
+        android:id="@+id/scheduleFragment"
+        app:showAsAction="always"
+        android:title="Schedule"/>
+    <item android:icon="@drawable/baseline_account_circle_24"
+        android:id="@+id/userFragment"
+        app:showAsAction="always"
+        android:title="User"/>
+</menu>

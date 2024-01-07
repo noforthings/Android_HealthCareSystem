@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".uis.ForDoctor.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="Welcome, doctor!"
+            android:textSize="20dp">
+        </TextView>
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:text="Your Appointment"
+            android:textSize="30dp"
+            android:textStyle="bold">
+        </TextView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        tools:context=".uis.ForDoctor.DoctorHomeActivity">
+        <TextView
+            android:id="@+id/txtAlterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:text="You don't have any appointment at this moment."
+            android:visibility="gone"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAppointments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+        <TableLayout
+            android:id="@+id/tableAppointment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/primary_50"
+            android:visibility="gone">
+
+            <!-- Week Range -->
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@color/primary_300"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Week: "
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/textViewWeekRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11/12/2023 - 18/12/2023"
+                    android:textColor="#333333"
+                    android:layout_weight="2"/>
+            </TableRow>
+
+            <!-- Days and Appointments -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Morning"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Afternoon"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Night"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!-- Sample Data for Monday -->
+            <TableRow
+                android:id="@+id/tableRowMonday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/day_of_week1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowTuesday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowWednesday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowThursday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowFriday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowSaturday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="On duty"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRowSunday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="Monday 11/12"
+                    android:textColor="#333333"
+                    android:background="@color/white"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"
+                    android:background="@color/white"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:text="No shift"
+                    android:textColor="#333333"
+                    android:textAlignment="center"
+                    android:padding="5dp"/>
+            </TableRow>
+
+        </TableLayout>
+    </RelativeLayout>
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btnSwitch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Switch"
+            android:background="@color/blue_2"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </TableRow>
+</androidx.constraintlayout.widget.ConstraintLayout>

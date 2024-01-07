@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="0dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/round_background_white1"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgInRecycler"
+        android:layout_width="80dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_height="80dp"
+        android:background="@drawable/round_background_white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/feature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/circular1"
+        app:shapeAppearanceOverlay="@style/circular1" />
+
+    <TextView
+        android:id="@+id/txtDrName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-5dp"
+        android:text="Dr. Nguyen Hong Sac"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imgInRecycler"
+        app:layout_constraintTop_toTopOf="@+id/imgInRecycler"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Foreskin cutting process"
+        app:flow_wrapMode="aligned"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/imgInRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/txtDrName"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Foreskin cutting process"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtTime"
+        app:layout_constraintStart_toEndOf="@+id/imgInRecycler"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:includeFontPadding="false"
+        android:layout_marginBottom="-3dp"
+        android:lineSpacingExtra="0dp"
+        android:padding="0dp"
+        android:text="Dec 14, 2023 | 04:00 PM"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgInRecycler"
+        app:layout_constraintStart_toEndOf="@+id/imgInRecycler"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btnAgain"
+
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/primary"
+        android:text="Book again"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgInRecycler"
+
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

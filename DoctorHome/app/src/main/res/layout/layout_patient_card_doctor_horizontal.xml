@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dentist_item"
+    android:layout_width="300dp"
+    android:layout_height="130dp"
+    android:background="@color/user_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/round_background"
+        android:padding="10dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dentist_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/card"
+            app:shapeAppearanceOverlay="@style/circular2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dentist_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dat"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+
+            <RatingBar
+                android:id="@+id/dentist_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_marginStart="10dp"
+                android:rating="4.5"/>
+
+
+            <TextView
+                android:id="@+id/dentist_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="ABC-XYZ///"
+                android:padding="10dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
